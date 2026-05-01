@@ -16,12 +16,11 @@ namespace IntroduccionCsharp.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Michel Omar Nava Oliva";
-            ViewBag.grupo = "IDGS904";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact()       
         {
             ViewBag.Message = "Your contact page.";
 
