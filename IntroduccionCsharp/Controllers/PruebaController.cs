@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IntroduccionCsharp.Models;
+using IntroduccionCsharp.Services;
 
 namespace IntroduccionCsharp.Controllers
 {
@@ -27,5 +29,20 @@ namespace IntroduccionCsharp.Controllers
 
             return View();
     }
+        public ActionResult Calculo(OperaBas op)
+        {
+            op.Suma();
+
+            return View(op);
+        }
+
+
+        public ActionResult MuestraPeliculas()
+        {
+            var PeliculasService = new PeliculasService();
+            var model = PeliculasService.ObtenerPelicula();
+
+            return View(model); 
+        }
 }
 }

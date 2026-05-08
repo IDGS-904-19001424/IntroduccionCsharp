@@ -1,0 +1,28 @@
+﻿@model IntroduccionCsharp.Models.Multiplicacion
+@{
+    ViewBag.Title = "MultiplicacionSumas";
+}
+
+<h2>Multiplicar mediante sumas</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form method="post" action="/Multiplicacion/MultSuma">
+                <label for="Num1">Número 1: </label>
+                <input type="text" name="Num1" value="" />
+                <br />
+                <label for="Num2">Número 2  : </label>
+                <input type="text" name="Num2" value="" />
+                <br />
+                <input type="submit" value="enviar" />
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <br />
+            <h1> El resultado de la multiplicación es: @Html.DisplayFor(model => model.Res)</h1>
+        </div>
+    </div>
+</div>

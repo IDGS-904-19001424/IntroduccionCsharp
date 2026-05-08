@@ -1,0 +1,33 @@
+﻿@model IntroduccionCsharp.Models.Distancia
+
+@{
+    ViewBag.Title = "CalculoDist";
+}
+
+<h2>Calculo Distancia</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form method="post" action="/Distancia/CalculoDist">
+                <label for="x1">Punto X1: </label>
+                <input type="text" name="x1" value="" />
+                <br />
+                <label for="y1">Punto Y1: </label>
+                <input type="text" name="y1" value="" />
+                <br />
+                <label for="x2">Punto X2: </label>
+                <input type="text" name="x2" value="" />
+                <br />
+                <label for="y2">Punto Y2: </label>
+                <input type="text" name="y2" value="" />
+                <br />
+                <input type="submit" value="enviar" />
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <br />
+            <h1> La distancia entre los puntos es: @Html.DisplayFor(model => model.Res)</h1>
+        </div>
+    </div>
